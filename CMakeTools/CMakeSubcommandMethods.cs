@@ -226,7 +226,7 @@ namespace CMakeTools
             { "EXPORT",     null },
             { "FILES",      null },
             { "PROGRAMS",   null },
-            { "SCRIPTS",    null },
+            { "SCRIPT",     null },
             { "TARGETS",    null }
         };
 
@@ -330,6 +330,7 @@ namespace CMakeTools
             new Dictionary<string, string[]>
         {
             { "AUTHOR_WARNING", null },
+            { "DEPRECATION",    null },
             { "FATAL_ERROR",    null },
             { "SEND_ERROR",     null },
             { "STATUS",         null },
@@ -347,6 +348,13 @@ namespace CMakeTools
             { "SOURCE",     null },
             { "TARGET",     null },
             { "TEST",       null }
+        };
+
+        // Parameters to the STRING(APPEND) command.
+        private static readonly string[] _stringAppendParams = new string[]
+        {
+            "output_variable",
+            "input1 input2 ..."
         };
 
         // Parameters to the STRING(ASCII) command.
@@ -450,6 +458,7 @@ namespace CMakeTools
             new Dictionary<string, string[]>
         {
             { "ASCII",              _stringAsciiParams },
+            { "APPEND",             _stringAppendParams },
             { "COMPARE",            null },
             { "CONCAT",             _stringConcatParams },
             { "CONFIGURE",          _stringConfigureParams },
