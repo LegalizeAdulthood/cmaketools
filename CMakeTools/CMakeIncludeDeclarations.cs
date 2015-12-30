@@ -187,6 +187,7 @@ namespace CMakeTools
             "FindGLEW",
             "FindGLU",
             "FindGLUT",
+            "FindGSL",
             "FindGTK",
             "FindGTK2",
             "FindGTest",
